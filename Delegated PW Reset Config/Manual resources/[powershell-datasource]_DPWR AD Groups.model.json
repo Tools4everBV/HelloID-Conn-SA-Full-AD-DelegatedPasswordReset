@@ -1,0 +1,58 @@
+[
+    {
+        "key":  "DistinguishedName",
+        "type":  0
+    },
+    {
+        "key":  "GroupCategory",
+        "type":  0
+    },
+    {
+        "key":  "GroupScope",
+        "type":  0
+    },
+    {
+        "key":  "Name",
+        "type":  0
+    },
+    {
+        "key":  "ObjectClass",
+        "type":  0
+    },
+    {
+        "key":  "ObjectGUID",
+        "type":  0
+    },
+    {
+        "key":  "SamAccountName",
+        "type":  0
+    },
+    {
+        "key":  "SID",
+        "type":  0
+    },
+    {
+        "key":  "PropertyNames",
+        "type":  0
+    },
+    {
+        "key":  "AddedProperties",
+        "type":  0
+    },
+    {
+        "key":  "RemovedProperties",
+        "type":  0
+    },
+    {
+        "key":  "ModifiedProperties",
+        "type":  0
+    },
+    {
+        "key":  "PropertyCount",
+        "type":  0
+    },
+    {
+        "key":  "Selected",
+        "type":  0
+    }
+]

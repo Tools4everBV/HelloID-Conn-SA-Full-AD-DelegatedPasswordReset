@@ -1,0 +1,18 @@
+[
+    {
+        "description":  "Add, Update, Remove",
+        "translateDescription":  false,
+        "inputFieldType":  1,
+        "key":  "Action_Flag",
+        "type":  0,
+        "options":  0
+    },
+    {
+        "description":  null,
+        "translateDescription":  false,
+        "inputFieldType":  1,
+        "key":  "Selected_Grid_Row",
+        "type":  0,
+        "options":  0
+    }
+]
