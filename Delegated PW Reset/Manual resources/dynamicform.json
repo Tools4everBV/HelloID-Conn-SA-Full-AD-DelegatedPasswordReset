@@ -1,0 +1,65 @@
+[
+    {
+        "key":  "grid1",
+        "templateOptions":  {
+                                "label":  "Users",
+                                "required":  true,
+                                "grid":  {
+                                             "columns":  [
+                                                             {
+                                                                 "headerName":  "Display Name",
+                                                                 "field":  "displayName"
+                                                             },
+                                                             {
+                                                                 "headerName":  "Username",
+                                                                 "field":  "sAMAccountName"
+                                                             },
+                                                             {
+                                                                 "headerName":  "Employee Type",
+                                                                 "field":  "employeeType"
+                                                             },
+                                                             {
+                                                                 "headerName":  "Employee Id",
+                                                                 "field":  "employeeId"
+                                                             },
+                                                             {
+                                                                 "headerName":  "Location",
+                                                                 "field":  "physicalDeliveryOfficeName"
+                                                             },
+                                                             {
+                                                                 "headerName":  "Description",
+                                                                 "field":  "description"
+                                                             }
+                                                         ],
+                                             "height":  300,
+                                             "rowSelection":  "single"
+                                         },
+                                "dataSourceConfig":  {
+                                                         "dataSourceGuid":  "$dataSourceGuid_0",
+                                                         "input":  {
+                                                                       "propertyInputs":  [
+
+                                                                                          ]
+                                                                   }
+                                                     },
+                                "useFilter":  true,
+                                "useDefault":  false
+                            },
+        "type":  "grid",
+        "summaryVisibility":  "Show",
+        "requiresTemplateOptions":  true
+    },
+    {
+        "key":  "confirmPasswordInput",
+        "templateOptions":  {
+                                "label":  "New Password",
+                                "useDependOn":  false,
+                                "dependOn":  "grid1",
+                                "required":  true,
+                                "minLength":  8
+                            },
+        "type":  "passwordconfirm",
+        "summaryVisibility":  "Hide value",
+        "requiresTemplateOptions":  true
+    }
+]

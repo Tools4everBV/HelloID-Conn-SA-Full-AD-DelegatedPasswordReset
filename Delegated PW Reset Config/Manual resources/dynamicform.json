@@ -1,0 +1,302 @@
+[
+    {
+        "key":  "grid",
+        "templateOptions":  {
+                                "label":  "Group to OU Mappings",
+                                "required":  false,
+                                "grid":  {
+                                             "columns":  [
+                                                             {
+                                                                 "headerName":  "Group",
+                                                                 "field":  "Group"
+                                                             },
+                                                             {
+                                                                 "headerName":  "Managed OUs",
+                                                                 "field":  "Display_OUs"
+                                                             }
+                                                         ],
+                                             "height":  300,
+                                             "rowSelection":  "single"
+                                         },
+                                "dataSourceConfig":  {
+                                                         "dataSourceGuid":  "$dataSourceGuid_0",
+                                                         "input":  {
+                                                                       "propertyInputs":  [
+
+                                                                                          ]
+                                                                   }
+                                                     },
+                                "useDefault":  false
+                            },
+        "type":  "grid",
+        "summaryVisibility":  "Show",
+        "requiresTemplateOptions":  true
+    },
+    {
+        "key":  "radioaction",
+        "templateOptions":  {
+                                "label":  "Actions",
+                                "useObjects":  true,
+                                "options":  [
+                                                {
+                                                    "value":  "Add",
+                                                    "label":  "Add New Group"
+                                                },
+                                                {
+                                                    "value":  "Update",
+                                                    "label":  "Update Existing Group"
+                                                },
+                                                {
+                                                    "value":  "Remove",
+                                                    "label":  "Remove Group"
+                                                }
+                                            ],
+                                "required":  true
+                            },
+        "type":  "radio",
+        "defaultValue":  "",
+        "summaryVisibility":  "Show",
+        "textOrLabel":  "label",
+        "requiresTemplateOptions":  true
+    },
+    {
+        "key":  "formRow3",
+        "templateOptions":  {
+
+                            },
+        "fieldGroup":  [
+                           {
+                               "key":  "dropDownAddGroup",
+                               "templateOptions":  {
+                                                       "label":  "Add Group",
+                                                       "required":  false,
+                                                       "useObjects":  false,
+                                                       "useDataSource":  true,
+                                                       "useFilter":  true,
+                                                       "options":  [
+                                                                       "Option 1",
+                                                                       "Option 2",
+                                                                       "Option 3"
+                                                                   ],
+                                                       "valueField":  "SamAccountName",
+                                                       "textField":  "Name",
+                                                       "dataSourceConfig":  {
+                                                                                "dataSourceGuid":  "$dataSourceGuid_1",
+                                                                                "input":  {
+                                                                                              "propertyInputs":  [
+                                                                                                                     {
+                                                                                                                         "propertyName":  "Action_Flag",
+                                                                                                                         "otherFieldValue":  {
+                                                                                                                                                 "otherFieldKey":  "radioaction"
+                                                                                                                                             }
+                                                                                                                     },
+                                                                                                                     {
+                                                                                                                         "propertyName":  "Selected_Grid_Row",
+                                                                                                                         "staticValue":  {
+
+                                                                                                                                         }
+                                                                                                                     }
+                                                                                                                 ]
+                                                                                          }
+                                                                            }
+                                                   },
+                               "hideExpression":  "model[\"radioaction\"]!==\u0027Add\u0027",
+                               "type":  "dropdown",
+                               "summaryVisibility":  "Show",
+                               "textOrLabel":  "text",
+                               "requiresTemplateOptions":  true
+                           },
+                           {
+                               "key":  "multiselectAddOU",
+                               "templateOptions":  {
+                                                       "label":  "Selected OU\u0027s",
+                                                       "useObjects":  false,
+                                                       "useFilter":  true,
+                                                       "options":  [
+                                                                       "Option 1",
+                                                                       "Option 2",
+                                                                       "Option 3"
+                                                                   ],
+                                                       "useDataSource":  true,
+                                                       "valueField":  "CanonicalName",
+                                                       "textField":  "CanonicalName",
+                                                       "dataSourceConfig":  {
+                                                                                "dataSourceGuid":  "$dataSourceGuid_2",
+                                                                                "input":  {
+                                                                                              "propertyInputs":  [
+                                                                                                                     {
+                                                                                                                         "propertyName":  "Action_Flag",
+                                                                                                                         "otherFieldValue":  {
+                                                                                                                                                 "otherFieldKey":  "radioaction"
+                                                                                                                                             }
+                                                                                                                     },
+                                                                                                                     {
+                                                                                                                         "propertyName":  "Selected_Grid_Row",
+                                                                                                                         "staticValue":  {
+
+                                                                                                                                         }
+                                                                                                                     }
+                                                                                                                 ]
+                                                                                          }
+                                                                            },
+                                                       "defaultSelectorProperty":  "Selected"
+                                                   },
+                               "hideExpression":  "model[\"radioaction\"]!==\u0027Add\u0027",
+                               "type":  "multiselect",
+                               "summaryVisibility":  "Show",
+                               "textOrLabel":  "text",
+                               "requiresTemplateOptions":  true
+                           }
+                       ],
+        "type":  "formrow",
+        "requiresTemplateOptions":  true
+    },
+    {
+        "key":  "formRow4",
+        "templateOptions":  {
+
+                            },
+        "fieldGroup":  [
+                           {
+                               "key":  "dropDownUpdateGroup",
+                               "templateOptions":  {
+                                                       "label":  "Update Group",
+                                                       "required":  false,
+                                                       "useObjects":  false,
+                                                       "useDataSource":  true,
+                                                       "useFilter":  false,
+                                                       "options":  [
+                                                                       "Option 1",
+                                                                       "Option 2",
+                                                                       "Option 3"
+                                                                   ],
+                                                       "valueField":  "SamAccountName",
+                                                       "textField":  "Name",
+                                                       "dataSourceConfig":  {
+                                                                                "dataSourceGuid":  "$dataSourceGuid_3",
+                                                                                "input":  {
+                                                                                              "propertyInputs":  [
+                                                                                                                     {
+                                                                                                                         "propertyName":  "Action_Flag",
+                                                                                                                         "otherFieldValue":  {
+                                                                                                                                                 "otherFieldKey":  "radioaction"
+                                                                                                                                             }
+                                                                                                                     },
+                                                                                                                     {
+                                                                                                                         "propertyName":  "Selected_Grid_Row",
+                                                                                                                         "otherFieldValue":  {
+                                                                                                                                                 "otherFieldKey":  "grid"
+                                                                                                                                             }
+                                                                                                                     }
+                                                                                                                 ]
+                                                                                          }
+                                                                            },
+                                                       "useDefault":  true,
+                                                       "defaultSelectorProperty":  "Selected"
+                                                   },
+                               "hideExpression":  "model[\"radioaction\"]!==\u0027Update\u0027",
+                               "type":  "dropdown",
+                               "summaryVisibility":  "Show",
+                               "textOrLabel":  "text",
+                               "requiresTemplateOptions":  true
+                           },
+                           {
+                               "key":  "multiselectUpdateOU",
+                               "templateOptions":  {
+                                                       "label":  "Select OU\u0027s",
+                                                       "useObjects":  false,
+                                                       "useFilter":  true,
+                                                       "options":  [
+                                                                       "Option 1",
+                                                                       "Option 2",
+                                                                       "Option 3"
+                                                                   ],
+                                                       "useDataSource":  true,
+                                                       "valueField":  "CanonicalName",
+                                                       "textField":  "CanonicalName",
+                                                       "dataSourceConfig":  {
+                                                                                "dataSourceGuid":  "$dataSourceGuid_4",
+                                                                                "input":  {
+                                                                                              "propertyInputs":  [
+                                                                                                                     {
+                                                                                                                         "propertyName":  "Action_Flag",
+                                                                                                                         "otherFieldValue":  {
+                                                                                                                                                 "otherFieldKey":  "radioaction"
+                                                                                                                                             }
+                                                                                                                     },
+                                                                                                                     {
+                                                                                                                         "propertyName":  "Selected_Grid_Row",
+                                                                                                                         "otherFieldValue":  {
+                                                                                                                                                 "otherFieldKey":  "grid"
+                                                                                                                                             }
+                                                                                                                     }
+                                                                                                                 ]
+                                                                                          }
+                                                                            },
+                                                       "useDefault":  true,
+                                                       "defaultSelectorProperty":  "Selected"
+                                                   },
+                               "hideExpression":  "model[\"radioaction\"]!==\u0027Update\u0027",
+                               "type":  "multiselect",
+                               "summaryVisibility":  "Show",
+                               "textOrLabel":  "text",
+                               "requiresTemplateOptions":  true
+                           }
+                       ],
+        "type":  "formrow",
+        "requiresTemplateOptions":  true
+    },
+    {
+        "key":  "formRow5",
+        "templateOptions":  {
+
+                            },
+        "fieldGroup":  [
+                           {
+                               "key":  "dropDownRemoveGroup",
+                               "templateOptions":  {
+                                                       "label":  "Remove Group",
+                                                       "required":  false,
+                                                       "useObjects":  false,
+                                                       "useDataSource":  true,
+                                                       "useFilter":  false,
+                                                       "options":  [
+                                                                       "Option 1",
+                                                                       "Option 2",
+                                                                       "Option 3"
+                                                                   ],
+                                                       "valueField":  "SamAccountName",
+                                                       "textField":  "Name",
+                                                       "dataSourceConfig":  {
+                                                                                "dataSourceGuid":  "$dataSourceGuid_5",
+                                                                                "input":  {
+                                                                                              "propertyInputs":  [
+                                                                                                                     {
+                                                                                                                         "propertyName":  "Action_Flag",
+                                                                                                                         "otherFieldValue":  {
+                                                                                                                                                 "otherFieldKey":  "radioaction"
+                                                                                                                                             }
+                                                                                                                     },
+                                                                                                                     {
+                                                                                                                         "propertyName":  "Selected_Grid_Row",
+                                                                                                                         "otherFieldValue":  {
+                                                                                                                                                 "otherFieldKey":  "grid"
+                                                                                                                                             }
+                                                                                                                     }
+                                                                                                                 ]
+                                                                                          }
+                                                                            },
+                                                       "useDefault":  true,
+                                                       "defaultSelectorProperty":  "Selected"
+                                                   },
+                               "hideExpression":  "model[\"radioaction\"]!==\u0027Remove\u0027",
+                               "type":  "dropdown",
+                               "summaryVisibility":  "Show",
+                               "textOrLabel":  "text",
+                               "requiresTemplateOptions":  true
+                           }
+                       ],
+        "type":  "formrow",
+        "requiresTemplateOptions":  true
+    }
+]

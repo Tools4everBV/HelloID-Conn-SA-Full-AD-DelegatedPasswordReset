@@ -1,0 +1,34 @@
+[
+    {
+        "key":  "canonicalName",
+        "type":  0
+    },
+    {
+        "key":  "description",
+        "type":  0
+    },
+    {
+        "key":  "displayName",
+        "type":  0
+    },
+    {
+        "key":  "DistinguishedName",
+        "type":  0
+    },
+    {
+        "key":  "employeeId",
+        "type":  0
+    },
+    {
+        "key":  "employeeType",
+        "type":  0
+    },
+    {
+        "key":  "sAMAccountName",
+        "type":  0
+    },
+    {
+        "key":  "HelloID_DisplayName",
+        "type":  0
+    }
+]
