@@ -59,3 +59,6 @@ This script returns the list of AD User accounts the requesting user has access 
 ### Delegated form task 'DPWR - Reset PW'
 Used by:  Delegated PW Reset.
 This delegated form task will reset the password and unlock the account of the selected user.
+
+# HelloID Docs
+The official HelloID documentation can be found at: https://docs.helloid.com/
