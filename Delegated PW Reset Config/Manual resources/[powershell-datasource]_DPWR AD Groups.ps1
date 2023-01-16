@@ -43,7 +43,7 @@ if ($Action_Flag -eq 'Add')
 # Write Config back.
 if($Config_Updated)
 {
-    $mtx = New-Object System.Threading.Mutex($false, "HelloIDFileWrite")
+    $mtx = [System.Threading.Mutex]::new($false, "HelloIDFileWrite")
     try {
         $mtx.WaitOne(60000) | out-null
     }

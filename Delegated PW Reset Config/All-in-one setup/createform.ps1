@@ -343,7 +343,7 @@ if ($Action_Flag -eq 'Add')
 # Write Config back.
 if($Config_Updated)
 {
-    $mtx = New-Object System.Threading.Mutex($false, "HelloIDFileWrite")
+    $mtx = [System.Threading.Mutex]::new($false, "HelloIDFileWrite")
     try {
         $mtx.WaitOne(60000) | out-null
     }
@@ -412,7 +412,7 @@ if ($Action_Flag -eq 'Add')
 # Write Config back.
 if($Config_Updated)
 {
-    $mtx = New-Object System.Threading.Mutex($false, "HelloIDFileWrite")
+    $mtx = [System.Threading.Mutex]::new($false, "HelloIDFileWrite")
     try {
         $mtx.WaitOne(60000) | out-null
     }
@@ -465,7 +465,7 @@ $ad_groups.foreach({$ad_groups_ht[$_.SamAccountName] = $_})
 # Write Config back if needed.
 if($config_updated)
 {
-    $mtx = New-Object System.Threading.Mutex($false, "HelloIDFileWrite")
+    $mtx = [System.Threading.Mutex]::new($false, "HelloIDFileWrite")
     try {
         $mtx.WaitOne(60000) | out-null
     }
@@ -534,7 +534,7 @@ if ($Action_Flag -eq 'Add')
 # Write Config back.
 if($Config_Updated)
 {
-    $mtx = New-Object System.Threading.Mutex($false, "HelloIDFileWrite")
+    $mtx = [System.Threading.Mutex]::new($false, "HelloIDFileWrite")
     try {
         $mtx.WaitOne(60000) | out-null
     }
@@ -723,7 +723,7 @@ switch ($Action_Flag)
 # Write Config back if needed.
 if($config_updated)
 {
-    $mtx = New-Object System.Threading.Mutex($false, "HelloIDFileWrite")
+    $mtx = [System.Threading.Mutex]::new($false, "HelloIDFileWrite")
     try {
         $mtx.WaitOne(60000) | out-null
     }
