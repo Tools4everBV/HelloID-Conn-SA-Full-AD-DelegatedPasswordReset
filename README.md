@@ -1,4 +1,15 @@
+# 📁 Repository Status: Archiving Notice
+
+Dear Contributors,
+
+The 'all-in-one' creation scripts are currently non-functional, indicating that this form/repository is no longer in active use. Consequently, we have decided to archive this repository. Unfortunately, due to our lack of utilization and the non-operational state of the current scripts, we are unable to easily split this repository into two separate ones.
+
+Should there still be a demand for and reliance on this repository, we are open to unarchiving it. However, this process will necessitate the involvement of someone actively engaged with and utilizing this repository to overhaul its contents.
+
+Thank you for your cooperation and understanding.
+
 <!-- Description -->
+## Description
 This set of HelloID Service Automation Delegated Forms provides a way to delegate selected AD Groups permission to reset passwords of accounts in specified Organizational Units.
 
 There are two delegated apps:
